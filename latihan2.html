@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="text1" id="text1">
+    <input type="text" name="text2" id="text2">
+    <button onclick="perhitungan('penjumlahan')">+</button>
+    <button onclick="perhitungan('pengurangan')">-</button>
+    <button onclick="perhitungan('perkalian')">x</button>
+    <button onclick="perhitungan('pembagian')">/</button>
+    <br>
+    <div id="hasil">
+
+    </div>
+    <script>
+        function perhitungan(hitung){
+            var angka1 = parseInt(document.getElementById("text1").value);
+            var angka2 = parseInt(document.getElementById("text2").value);
+            var hasil;
+            if(hitung == "penjumlahan"){
+                hasil = angka1 + angka2;
+            }else if(hitung == "pengurangan"){
+                hasil = angka1 - angka2;
+            }else if(hitung == "perkalian"){
+                hasil = angka1 * angka2;
+            }else if(hitung == "pembagian"){
+                hasil = angka1 / angka2;
+            }
+
+            document.getElementById("hasil").innerHTML = "Hasil " + hitung + "nya adalah " + hasil;
+        }
+
+    </script>
+</body>
+</html>

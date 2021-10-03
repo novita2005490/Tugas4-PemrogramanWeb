@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="inputan" id="inputan" onkeypress="tambahkalimat()">
+    <button onclick="panggilalert()"> SIK 2020 </button> <br/>
+    <div id="tambahkalimatt">
+
+    </div>
+    <script>
+        function panggilalert(){
+            var kalimat = document.getElementById("inputan").value
+            alert(kalimat)
+        }
+
+        function tambahkalimat(){
+            var kalimat = document.getElementById("inputan").value
+            document.getElementById("tambahkalimatt").innerHTML = kalimat
+        }
+    </script>
+</body>
+</html>
